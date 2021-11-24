@@ -8,8 +8,8 @@ def inicio(request):
 
 def Home(request):
 
-    if request.method == 'post':
-        aparatosform = Aparatosfrom(request.post)
+    if request.method == 'POST':
+        aparatosform = Aparatosfrom(request.POST)
         if aparatosform.is_valid():
             aparatosform.save()
             return redirect('/libro')
@@ -18,8 +18,8 @@ def Home(request):
     return render(request, 'Libro/aparatos.html', {'form': aparatosform})
 
 def Home1(request):
-    if request.method == 'post':
-        salasform = Salasfrom(request.post)
+    if request.method == 'POST':
+        salasform = Salasfrom(request.POST)
         if salasform.is_valid():
             salasform.save()
             return redirect('/libro')
@@ -28,8 +28,8 @@ def Home1(request):
     return render(request, 'Libro/salas.html',{'form': salasform})
 
 def Home2(request):
-    if request.method == 'post':
-        usuarioform = Sociosfrom(request.post)
+    if request.method == 'POST':
+        usuarioform = Sociosfrom(request.POST)
         if usuarioform.is_valid():
             usuarioform.save()
             return redirect('/libro')
@@ -38,8 +38,8 @@ def Home2(request):
     return render(request, 'Libro/socios.html',{'form': usuarioform})
 
 def Home3(request):
-    if request.method == 'post':
-        entrenadorform = Entrenadorfrom(request.post)
+    if request.method == 'POST':
+        entrenadorform = Entrenadorfrom(request.POST)
         if entrenadorform.is_valid():
             entrenadorform.save()
             return redirect('/libro')
@@ -49,8 +49,8 @@ def Home3(request):
 
 
 def Home4(request):
-    if request.method == 'post':
-        clasesform = Clasesfrom(request.post)
+    if request.method == 'POST':
+        clasesform = Clasesfrom(request.POST)
         if clasesform.is_valid():
             clasesform.save()
             return redirect('/libro')
@@ -59,8 +59,8 @@ def Home4(request):
     return render(request, 'Libro/clases.html',{'form': clasesform})
 
 def Home5(request):
-    if request.method == 'post':
-        actividadform = Actividadfrom(request.post)
+    if request.method == 'POST':
+        actividadform = Actividadfrom(request.POST)
         if actividadform.is_valid():
             actividadform.save()
             return redirect('/libro')
@@ -70,8 +70,8 @@ def Home5(request):
 
 
 def Home6(request):
-    if request.method == 'post':
-        clase_socio = clases_sociosfrom(request.post)
+    if request.method == 'POST':
+        clase_socio = clases_sociosfrom(request.POST)
         if clase_socio.is_valid():
             clase_socio.save()
             return redirect('/libro')
@@ -80,8 +80,8 @@ def Home6(request):
     return render(request, 'Libro/clase_socio.html',{'form': clase_socio})
 
 def Home7(request):
-    if request.method == 'post':
-        entrenador_activ = entrenador_tipoactividadfrom(request.post)
+    if request.method == 'POST':
+        entrenador_activ = entrenador_tipoactividadfrom(request.POST)
         if entrenador_activ.is_valid():
             entrenador_activ.save()
             return redirect('/libro')
